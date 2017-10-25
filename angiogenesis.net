@@ -1,0 +1,66 @@
+targets, factors
+AKT, PIP3
+ALK1, BMP9 |BMP10 | TGFB1
+ALK5, BMP9
+AMPATP, AMPATP
+AMPK, (AMPATP | (!Oxygen)) & (!AKT)
+ANG1, ANG1
+ANG2, (!KLF2) & (HIF1 | ETS | AP1 | FOXO1)
+AP1, WNT5a
+Bcatenin, WNT5a | WNT7a
+BMP10, BMP10
+BMP9, BMP9
+Calcium, PLCg | ShearStress | (!NO)
+DLL4a, ETS | NICD
+DLL4p, DLL4p
+ETS, MEK | VEGFR33
+FAK, SRC | Integrin
+FGF, FGF
+FOXO1, (!AKT) & SIRT1
+HEY1, NICD | ((SMAD1 | SMAD2) & (!SIRT1))
+HIF1, (AMPK | !TSC) & !Oxygen & SIRT1
+IGF, IGF
+Integrin, ETS & (ShearStress | TIE2)
+JAGa, SMAD1 | Bcatenin
+JAGp, JAGp
+KLF2, ShearStress
+LEF1, Bcatenin & (LEF1 | NRARP)
+MEK, (((PLCg & Calcium) | RAS) & (!AKT)) | FGF
+NFAT, Calcium
+NICD, (!NRARP) & NOTCH
+NO, Calcium | AKT | SIRT1
+NOTCH, (!JAGp) & ETS & DLL4p
+NRP1, (VEGFAxxx | VEGFC_Dp) & (!NICD | ETS)
+NRARP, NICD
+Oxygen, Oxygen
+p38MAPK, SRC | PLCg | ALK1
+PECAM1, VEGFR22 | VEGFR23 | ShearStress | VEcadherin
+PIP3,(!NICD) & (!WNT5a) & (!WNT7a) & (!NRP1) & (SRC | KLF2 | VEcadherin | TIE2)
+PLCg, VEGFR22 | VEGFR33 | WNT5a | WNT7a
+RAS, PECAM1 | KLF2 | ALK1
+ShearStress, ShearStress
+SIRT1, AMPK & (HIF1 | FOXO1)
+SMAD1, (!SMAD6) & (!NRP1) & ALK1 
+SMAD2, (!SMAD6) & (!NRP1) & ALK5
+SMAD6, NICD
+SRC, FAK | ShearStress | VEGFR22 | VEGFR23
+STAT3, VEGFR22
+TGFB1, TGFB1
+TIE2, (!ANG2) & ANG1 & (ETS | KLF2)
+TSC, AMPK & (!AKT)
+VEcadherin, ETS & (SRC | FAK | ShearStress | HIF1)
+VegfA, (!Oxygen) | HIF1 | STAT3 | FOXO1 | NFAT | KLF2
+VEGFAxxx, VEGFAxxxP | VEGFAxxxA
+VEGFAxxxA, VegfA & IGF & ((!NICD & !HIF1 & !ETS)| NFAT) & (!AMPK)
+VEGFAxxxd, p38MAPK & VegfA
+VEGFAxxxP, VEGFAxxxP
+VEGFC_D, VEGFC_D
+VEGFC_Dp, VEGFC_Dp
+Vegfr2, (ETS & (!HEY1)) | !Oxygen
+VEGFR22, Vegfr2 & (PECAM1 | ((VEGFC_Dp | VEGFAxxx) & !(VEGFAxxxd | HIF1))
+VEGFR23, Vegfr2 & Vegfr3 & (PECAM1 | VEGFAxxx | VEGFC_Dp)
+Vegfr3, NICD
+VEGFR33, Vegfr3 & (PECAM1 | VEGFC_D | VEGFC_Dp)
+WNT5a, WNT5a
+WNT7a, WNT7a
+
