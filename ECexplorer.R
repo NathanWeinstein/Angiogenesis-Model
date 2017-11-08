@@ -10,7 +10,7 @@ if(file.exists(simple_model)){
 	print("The file containing the simplified model is not in the working directory")
 }
 detailed_model <- paste(WD, "angiofull.net", sep = "/")
-if(file.exists(simple_model)){
+if(file.exists(detailed_model)){
 }else{
 	print("The file containing the detailed model is not in the working directory")
 } 
